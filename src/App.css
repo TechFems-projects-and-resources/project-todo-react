@@ -17,3 +17,13 @@ html {
 img {
   width: 300px;
 }
+
+.todo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title, #comment {
+  display: flex;
+}
