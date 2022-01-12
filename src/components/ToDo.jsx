@@ -5,6 +5,9 @@ const ToDo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log(card);
+    
   };
 
   // With hooks, the old state is REPLACED by the one that triggers the event.
@@ -15,7 +18,7 @@ const ToDo = () => {
     setCard({
       ...card,
       [e.target.name]: e.target.value,
-    });
+    });    
   };
 
   return (
@@ -29,7 +32,7 @@ const ToDo = () => {
           onChange={handleChange}
           placeholder="Title"
         />
-        <input
+        <textarea
           type="text"
           id="comment"
           name="comment"
