@@ -6,6 +6,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: cornflowerblue;
 }
 
 .overview {
@@ -18,13 +19,32 @@ img {
   width: 300px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .todo-card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#title, #comment {
+#title,
+#comment {
   display: flex;
   width: 100%;
+  border: 2px solid cornflowerblue;
+  color: darkblue;
+}
+
+#submit-btn {
+  cursor: pointer;
+  background-color: rgb(144, 180, 247);
+  margin: 10px;
+}
+
+#submit-btn:hover {
+  background-color: cornflowerblue;
 }
