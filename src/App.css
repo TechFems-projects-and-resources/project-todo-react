@@ -32,7 +32,8 @@ form {
 }
 
 #title,
-#comment {
+#comment,
+#tag {
   display: flex;
   width: 100%;
   border: 2px solid cornflowerblue;

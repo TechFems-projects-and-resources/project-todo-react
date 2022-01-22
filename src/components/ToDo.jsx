@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
 const ToDo = () => {
-  const [card, setCard] = useState({ title: "", comment: "" });
-  // HOW DO I GET A KEY FOR LOCAL STORAGE - USE DATE&TIME?
-  const [key, setKey] = useState(new Date())
+  const [card, setCard] = useState({ title: "", comment: "", tag: "" });
+  const [key, setKey] = useState(new Date().toLocaleString("nl"))
 
   // With hooks, the old state is REPLACED by the one that triggers the event.
   // To correct that, you’ll need to copy the entire properties from the old state
@@ -16,16 +15,19 @@ const ToDo = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(card);
-    setKey(new Date())
+    e.preventDefault();    
+    setKey(new Date().toLocaleString("nl"))
+    
     localStorage.setItem(JSON.stringify(key), JSON.stringify(card));
     setTimeout(resetCard, 4000)
   };
 
   const resetCard = () => {
-    setCard({ title: "", comment: "" })
+    setCard({ title: "", comment: "", tag: "" })
   }
+
+
+
 
   return (
     <div className="todo-card">
@@ -45,6 +47,14 @@ const ToDo = () => {
           value={card.comment}
           onChange={handleChange}
           placeholder="Description"
+        />
+        <input
+          type="text"
+          id="tag"
+          name="tag"
+          value={card.tag}
+          onChange={handleChange}
+          placeholder="Tag(s)"
         />
         <button id="submit-btn" type="submit" onClick={handleSubmit}>
           Submit
