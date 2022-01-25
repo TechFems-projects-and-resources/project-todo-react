@@ -13,12 +13,13 @@ function App() {
     while (i--) {
       values.push(localStorage.getItem(keys[i]));
     }
+    // console.log(JSON.parse(values));
+
     return values;
   };
 
   useEffect(() => {    
     getTodoStorage((values) => {
-      console.log(values);
       
       setTodoList(values);
       console.log(todoList);

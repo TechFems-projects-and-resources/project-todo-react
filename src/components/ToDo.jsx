@@ -19,7 +19,7 @@ const ToDo = () => {
     setKey(new Date().toLocaleString("nl"))
     
     localStorage.setItem(JSON.stringify(key), JSON.stringify(card));
-    setTimeout(resetCard, 3000)
+    setTimeout(resetCard, 2000)
   };
 
   const resetCard = () => {
