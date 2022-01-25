@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ToDo = () => {
-  const [card, setCard] = useState({ title: "", comment: "", tag: "" });
+  const [card, setCard] = useState({ title: "", description: "", tag: "" });
   const [key, setKey] = useState(new Date().toLocaleString("nl"))
 
   // With hooks, the old state is REPLACED by the one that triggers the event.
@@ -23,11 +23,8 @@ const ToDo = () => {
   };
 
   const resetCard = () => {
-    setCard({ title: "", comment: "", tag: "" })
+    setCard({ title: "", description: "", tag: "" })
   }
-
-
-
 
   return (
     <div className="todo-card">
@@ -42,9 +39,9 @@ const ToDo = () => {
         />
         <textarea
           type="text"
-          id="comment"
-          name="comment"
-          value={card.comment}
+          id="description"
+          name="description"
+          value={card.description}
           onChange={handleChange}
           placeholder="Description"
         />

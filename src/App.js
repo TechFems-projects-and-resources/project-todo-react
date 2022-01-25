@@ -12,8 +12,6 @@ function App() {
 
     while (i--) {
       values.push(localStorage.getItem(keys[i]));
-      console.log(values);
-      
     }
     return values;
   };
@@ -30,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>This is my todo app, created with React</h1>
+        <h1>This is a todo app, created with React</h1>
       </div>
       <div>
         <ToDoOverview todoList={todoList} />

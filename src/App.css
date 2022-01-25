@@ -32,7 +32,7 @@ form {
 }
 
 #title,
-#comment,
+#description,
 #tag {
   display: flex;
   width: 100%;
