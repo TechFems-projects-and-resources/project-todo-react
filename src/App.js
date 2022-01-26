@@ -6,25 +6,23 @@ function App() {
   const [todoList, setTodoList] = useState([]);
 
   const getTodoStorage = () => {
-    let values = [];
+    let cards = [];
     let keys = Object.keys(localStorage);
     let i = keys.length;
 
     while (i--) {
-      values.push(localStorage.getItem(keys[i]));
+      cards.push(JSON.parse(localStorage.getItem(keys[i])));
     }
-    // console.log(JSON.parse(values));
-
-    return values;
+    return cards;
   };
 
-  useEffect(() => {    
-    getTodoStorage((values) => {
-      
-      setTodoList(values);
-      console.log(todoList);
-    });
-  }, [todoList]);
+  useEffect(() => {
+    setTodoList(getTodoStorage());
+  }, []);
+
+  useEffect(() => {
+    console.log(todoList);
+  }, [todoList])
 
   return (
     <div className="App">

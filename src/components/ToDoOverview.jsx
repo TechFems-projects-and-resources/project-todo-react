@@ -7,12 +7,18 @@ const ToDoOverview = (props) => {
       <h1>Get all To Do cards in the overview</h1>
       <ToDo />
 
-      {/* {todoList.map((key, item) => {
-        <div key={key}>
-          <ToDo title={item.title} description={item.comment} tags={item.tags} />
-        </div>;
-      })} */}
-      
+      {props.todoList.map((card, index) => {
+        return (
+          <div key={index}>
+          <p>Title: {card.title}</p>
+          <p>Description: {card.description}</p>
+          <p>Tags: {card.tags}</p>
+        </div>
+        )
+        
+      })}
+
+
     </div>
   );
 };
