@@ -7,16 +7,17 @@ const ToDoOverview = (props) => {
       <h1>Get all To Do cards in the overview</h1>
       
       <ToDo />
-
+      <div class="card-list">
       {props.todoList.map((card, index) => {
         return (
-          <div key={index}>
+          <div className="overview-card" key={index}>
             <p>Title: {card.title}</p>
             <p>Description: {card.description}</p>
-            <p>Tags: {card.tags}</p>
+            <p>Tags: {card.tag}</p>
           </div>
         );
       })}
+      </div>
     </div>
   );
 };

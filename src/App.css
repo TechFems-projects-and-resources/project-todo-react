@@ -15,6 +15,16 @@ html {
   align-items: center;
 }
 
+.card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overview-card {
+  color: rgb(48, 47, 47);
+}
+
 img {
   width: 300px;
 }
