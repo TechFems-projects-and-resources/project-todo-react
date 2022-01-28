@@ -1,13 +1,10 @@
 html {
   margin: 0 auto;
-}
-
-/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: cornflowerblue;
-} */
+}
 
 .homepage {
   display: flex;
@@ -36,7 +33,6 @@ html {
 .nav-button:hover {
   background-color: cornflowerblue;
 }
-
 
 .overview {
   display: flex;
@@ -87,4 +83,14 @@ form {
 
 #submit-btn:hover {
   background-color: cornflowerblue;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 50px;
+  color: darkblue;
+  background-color: rgb(144, 180, 247);
 }
