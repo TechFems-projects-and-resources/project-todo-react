@@ -1,15 +1,15 @@
 import "./App.css";
-import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Homepage from "./components/Homepage";
 // import ToDoOverview from "./components/ToDoOverview";
 
 function App() {
-
   return (
-    <Switch>
-      <Route path="/" exact component={Homepage} />
-    </Switch>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

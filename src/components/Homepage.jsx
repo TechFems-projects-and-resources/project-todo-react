@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import { useState, useEffect} from "react";
+import { useNavigate } from 'react-router-dom';
 import ToDoOverview from "./ToDoOverview";
 
 const Homepage = () => {
   const [todoList, setTodoList] = useState([]);
+  const navigate = useNavigate();
 
   const getTodoStorage = () => {
     let cards = [];
@@ -26,13 +28,12 @@ const Homepage = () => {
   return (
     <div>
       <h1>This is a todo app, created with React</h1>
-
       <div>
-        <ToDoOverview todoList={todoList} />
+        {/* <ToDoOverview todoList={todoList} /> */}
       </div>
       <div>
-        <button onClick={() => history.push("/todo")}>Create new To Do</button>
-        <button onClick={() => history.push("/todooverview")}>To Do Overview</button>
+        <button onClick={() => navigate("/todo")}>Create new To Do</button>
+        <button onClick={() => navigate("/todooverview")}>To Do Overview</button>
       </div>
     </div>
   );
