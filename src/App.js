@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom"
 import ToDoOverview from "./components/ToDoOverview";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
   }, [todoList])
 
   return (
+    <Router>
     <div className="App">
       <div>
         <h1>This is a todo app, created with React</h1>
@@ -33,6 +35,7 @@ function App() {
         <ToDoOverview todoList={todoList} />
       </div>
     </div>
+    </Router>
   );
 }
 
