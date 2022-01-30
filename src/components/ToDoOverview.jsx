@@ -1,5 +1,4 @@
 import { useState, useEffect} from "react";
-import ToDo from "./ToDo";
 
 const ToDoOverview = () => {
   const [todoList, setTodoList] = useState([]);
