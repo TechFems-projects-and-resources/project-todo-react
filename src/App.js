@@ -10,6 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/home" element={<Homepage />} />
         <Route path="/todo" element={<ToDo />} />
         <Route path="/todooverview" element={<ToDoOverview />} />
         <Route path="*" element={<Error />} />

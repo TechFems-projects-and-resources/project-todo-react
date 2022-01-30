@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const ToDo = () => {
   const [card, setCard] = useState({ title: "", description: "", tag: "" });
-  // const [key, setKey] = useState(new Date().toLocaleString("nl"))
 
   // With hooks, the old state is REPLACED by the one that triggers the event.
   // To correct that, you’ll need to copy the entire properties from the old state

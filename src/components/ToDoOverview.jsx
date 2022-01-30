@@ -6,6 +6,7 @@ const ToDoOverview = () => {
   const getTodoStorage = () => {
     let cards = [];
     let keys = Object.keys(localStorage);
+    
     let i = keys.length;
 
     while (i--) {
@@ -18,9 +19,9 @@ const ToDoOverview = () => {
     setTodoList(getTodoStorage());
   }, []);
 
-  useEffect(() => {
-    console.log(todoList);
-  }, [todoList]);
+  // useEffect(() => {
+  //   console.log(todoList);
+  // }, [todoList]);
 
   return (
     <div className="overview">
