@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ToDo = () => {
   const [card, setCard] = useState({ title: "", description: "", tag: "" });
+  const navigate = useNavigate();
 
   // With hooks, the old state is REPLACED by the one that triggers the event.
   // To correct that, you’ll need to copy the entire properties from the old state
@@ -53,7 +55,13 @@ const ToDo = () => {
           placeholder="Tag(s)"
         />
         <button id="submit-btn" type="submit" onClick={handleSubmit}>
-          Submit
+          Submit To Do
+        </button>
+        <button className="nav-button" onClick={() => navigate("/todooverview")}>
+          To Do Overview
+        </button>
+        <button className="nav-button" onClick={() => navigate("/")}>
+          Back to homepage
         </button>
       </form>
     </div>
